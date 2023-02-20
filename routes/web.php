@@ -14,5 +14,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('listings', [
+        'heading' => 'Latest Listings',
+        'listings' => [
+            [
+                'id' => 1,
+                'title' => 'Listing One',
+                'description' => 'The company itself is a very successful company. He will criticize the very least and that 
+                which we can have the pleasure of rejecting when it is convenient, something will happen that he seeks to achieve! 
+                Expedite from the pursuit is held to be lenient?'
+            ],
+            [
+                'id' => 2,
+                'title' => 'Listing Two',
+                'description' => 'The company itself is a very successful company. He will criticize the very least and that 
+                which we can have the pleasure of rejecting when it is convenient, something will happen that he seeks to achieve! 
+                Expedite from the pursuit is held to be lenient?'
+            ]
+        ]
+    ]);
 });
